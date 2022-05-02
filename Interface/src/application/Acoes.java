@@ -1,11 +1,18 @@
 package application;
 
+import java.awt.Desktop;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 
 public class Acoes {
 	
@@ -34,15 +41,19 @@ public class Acoes {
     private Button btnRegistrar;
     @FXML
     private Button btnLogar;
+    @FXML
+    private Label lblHora;
+    @FXML
+    private Hyperlink Link;
     
     // FIM VARS PRIVATES
-
+    
     // AREA DE REGISTRO
    
     @FXML
     void ClicouRegistrar(ActionEvent event) {
     	
-    	// DECLARAÇÃO DE VARS
+    	// DECLARAï¿½ï¿½O DE VARS
     	
     	usuario = txtUsuario.getText();
     	senha = txtSenha.getText();
@@ -57,17 +68,17 @@ public class Acoes {
     		
     		if (senha.length() >= 6) {
     		
-    			// APARECER MENSAGENS E BOTÕES
+    			// APARECER MENSAGENS E BOTï¿½ES
     			
     			btnLogar.setVisible(true);
     			lblRegistro.setText("  Login");
     		
     			// RESETAR TEXTOS
     			
-    			txtUsuario.setText("");
-    			txtSenha.setText("");
+    			txtUsuario.clear();
+    			txtSenha.clear();
     			
-    			// SUMIR MENSAGENS E BOTÕES
+    			// SUMIR MENSAGENS E BOTï¿½ES
     			
     			lblPreencha.setVisible(false);
     			lblSenhaCurta.setVisible(false);
@@ -92,6 +103,7 @@ public class Acoes {
     		lblSenhaCurta.setVisible(false);
     		
     		lblPreencha.setVisible(true);
+    		
 
     	}
     	
@@ -102,7 +114,7 @@ public class Acoes {
     @FXML
     void ClicouLogar(ActionEvent event) {
     	
-    	// DECLARAÇÃO DE VARS
+    	// DECLARAï¿½ï¿½O DE VARS
     	
     	usuarioLogin = txtUsuario.getText();
     	senhaLogin = txtSenha.getText(); 
@@ -129,8 +141,30 @@ public class Acoes {
     	}
 
     }
+    
+    @FXML
+    void ApertouEnter(KeyEvent event) {
+    	
+    	KeyCode tecla = event.getCode();
+    	
+    	if (tecla == event.getCode().ENTER) {
+    		
+    		txtSenha.requestFocus();
+    			
+    	}
 
+    }
+
+    @FXML
+    void LinkClique(ActionEvent event) throws URISyntaxException, IOException {
+
+    	Desktop.getDesktop().browse(new URI("https://www.instagram.com/im.theusz/"));
+    	
+    }
+    
 }
+
+
 
 
 
