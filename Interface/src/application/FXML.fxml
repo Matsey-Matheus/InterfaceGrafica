@@ -8,14 +8,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="600.0" maxWidth="500.0" minHeight="600.0" minWidth="500.0" prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Acoes">
+<AnchorPane cache="true" prefHeight="600.0" prefWidth="500.0" style="-fx-background-color: Lavender;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Acoes">
    <children>
-      <Label fx:id="lblRegistro" layoutX="179.0" layoutY="109.0" text="Registro">
+      <Label fx:id="lblRegistro" layoutX="171.0" layoutY="116.0" text="Facebook" textFill="#4267b2" textOverrun="CLIP">
          <font>
             <Font name="System Bold" size="36.0" />
          </font>
       </Label>
-      <TextField fx:id="txtUsuario" layoutX="138.0" layoutY="211.0" onKeyReleased="#ApertouEnter" promptText="              Usuario">
+      <TextField fx:id="txtUsuario" layoutX="138.0" layoutY="211.0" onKeyReleased="#ApertouEnter" promptText="       Email ou telefone">
          <font>
             <Font size="18.0" />
          </font>
@@ -25,7 +25,7 @@
             <Font size="18.0" />
          </font>
       </PasswordField>
-      <Button fx:id="btnRegistrar" layoutX="200.0" layoutY="390.0" mnemonicParsing="false" onAction="#ClicouRegistrar" text="Registrar">
+      <Button fx:id="btnRegistrar" layoutX="200.0" layoutY="390.0" mnemonicParsing="false" onAction="#ClicouRegistrar" style="-fx-background-color: #4267b2; -fx-border-color: #4267b2; -fx-cursor: HAND; -fx-background-radius: 10; -fx-border-radius: 10;" text="Registrar" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -45,6 +45,11 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Hyperlink fx:id="Link" layoutX="14.0" layoutY="561.0" onAction="#LinkClique" text="Instagram" />
+      <Hyperlink fx:id="Link" layoutX="198.0" layoutY="441.0" onAction="#LinkClique" text="Esqueceu a senha?" />
+      <Button fx:id="btnRegistrar1" layoutX="170.0" layoutY="496.0" mnemonicParsing="false" onAction="#ClicouRegistrar" style="-fx-background-color: LimeGreen; -fx-border-color: LimeGreen; -fx-cursor: HAND; -fx-background-radius: 10; -fx-border-radius: 10;" text="Criar nova conta" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

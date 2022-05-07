@@ -4,9 +4,12 @@ import java.awt.Desktop;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.time.LocalDate;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -42,7 +45,7 @@ public class Acoes {
     @FXML
     private Button btnLogar;
     @FXML
-    private Label lblHora;
+    private DatePicker Data;
     @FXML
     private Hyperlink Link;
     
@@ -53,8 +56,7 @@ public class Acoes {
     @FXML
     void ClicouRegistrar(ActionEvent event) {
     	
-    	// DECLARA��O DE VARS
-    	
+    	// DECLARA��O DE VARS  	
     	usuario = txtUsuario.getText();
     	senha = txtSenha.getText();
     	
@@ -150,6 +152,14 @@ public class Acoes {
     	if (tecla == event.getCode().ENTER) {
     		
     		txtSenha.requestFocus();
+    		
+    		
+    		
+    //		if () {
+    		
+    //			System.out.println("eae");
+    		
+    //		}
     			
     	}
 
