@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
@@ -46,10 +47,12 @@
          </font>
       </Label>
       <Hyperlink fx:id="Link" layoutX="198.0" layoutY="441.0" onAction="#LinkClique" text="Esqueceu a senha?" />
-      <Button fx:id="btnRegistrar1" layoutX="170.0" layoutY="496.0" mnemonicParsing="false" onAction="#ClicouRegistrar" style="-fx-background-color: LimeGreen; -fx-border-color: LimeGreen; -fx-cursor: HAND; -fx-background-radius: 10; -fx-border-radius: 10;" text="Criar nova conta" textFill="WHITE">
+      <Button fx:id="btnRegistrar1" layoutX="170.0" layoutY="505.0" mnemonicParsing="false" onAction="#ClicouRegistrar" style="-fx-background-color: LimeGreen; -fx-border-color: LimeGreen; -fx-cursor: HAND; -fx-background-radius: 10; -fx-border-radius: 10;" text="Criar nova conta" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
+      <Separator layoutY="176.0" prefHeight="17.0" prefWidth="500.0" />
+      <Separator layoutY="472.0" prefHeight="17.0" prefWidth="500.0" />
    </children>
 </AnchorPane>
